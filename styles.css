@@ -11,18 +11,21 @@
 :root {
   /* ### Primary */
   --Tomato: hsl(4, 100%, 67%);
+  --Tomato-bg: hsl(5, 100%, 95%);
   /* ### Neutral */
   --Dark-Slate-Grey: hsl(234, 29%, 20%);
   --Charcoal-Grey: hsl(235, 18%, 26%);
   --Grey: hsl(231, 7%, 60%);
   --White: hsl(0, 0%, 100%);
+  /* Gradient */
+  --pink-gradient: hsl(347, 100%, 66%);
+  --orange-gradient: hsl(14, 99%, 62%);
 }
 
 body {
   display: grid;
   height: 100vh;
   justify-content: center;
-  align-items: center;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   background-color: var(--Dark-Slate-Grey);
@@ -63,7 +66,10 @@ ul li {
 
 .image-container {
   order: 1;
-  justify-self: end;
+}
+
+.image-container img {
+  width: 100%;
 }
 
 .email-container {
@@ -88,14 +94,25 @@ input[type="email"] {
 button {
   background-color: var(--Dark-Slate-Grey);
   color: var(--White);
-  border-radius: 0.5rem;
   font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover {
+  background: linear-gradient(90deg, var(--pink-gradient), var(--orange-gradient));
 }
 
 input[type="email"],
 button {
   border: 0;
   padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.red {
+  outline: 1px solid var(--Tomato) !important;
+  background: var(--Tomato-bg);
+  color: var(--Tomato);
 }
 
 /* Typography */
@@ -116,6 +133,9 @@ label {
 }
 
 @media screen and (min-width: 48rem) {
+  body {
+    align-items: center;
+  }
   .card-container {
     grid-template-columns: 1fr 1fr;
     padding: 1rem;
@@ -123,5 +143,9 @@ label {
 
   .image-container {
     order: 2;
+  }
+
+  .image-container {
+    justify-self: end;
   }
 }

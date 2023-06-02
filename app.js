@@ -12,8 +12,10 @@ function validateEmail(event) {
   const isValidEmail = emailRegex.test(emailValue);
 
   if (!isValidEmail) {
+    emailInput.classList.add("red"); // Add the "red" class to the email input
     emailError.style.display = "block";
   } else {
+    emailInput.classList.remove("red"); // Remove the "red" class from the email input if it was previously added
     emailError.style.display = "none";
     // Submit the form or perform other actions
     // Here you can add the code to submit the form or perform any other actions when the email is valid
