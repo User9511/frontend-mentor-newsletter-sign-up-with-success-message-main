@@ -1,52 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+  </head>
+  <body>
+    <!-- Sign-up form start -->
+    <main class="card-container">
+      <div class="text-container">
+        <h1>Stay updated!</h1>
+        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+        <ul>
+          <li class="icon-list"><img src="./assets/images/icon-list.svg" alt="" /><span> Product discovery and building what matters</span></li>
+          <li class="icon-list"><img src="./assets/images/icon-list.svg" alt="" /> <span> Measuring to ensure updates are a success</span></li>
+          <li class="icon-list"><img src="./assets/images/icon-list.svg" alt="" /><span>And much more!</span></li>
+        </ul>
+        <!-- Email Ipout -->
+        <div class="email-container">
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email" placeholder="email@company.com" required />
+          <span id="email-error">Valid email required</span>
+        </div>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+        <button class="btn">Subscribe to monthly newsletter</button>
+      </div>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+      <div class="image-container">
+        <picture>
+          <source media="(min-width: 48rem)" srcset="assets/images/illustration-sign-up-desktop.svg" />
+          <img src="assets/images/illustration-sign-up-mobile.svg" alt="Chris standing up holding his daughter Elva" />
+        </picture>
+      </div>
 
-  <!-- Sign-up form start -->
+      <!-- Sign-up form end -->
 
-  Stay updated!
+      <!-- Success message start -->
 
-  Join 60,000+ product managers receiving monthly updates on:
-
-  Product discovery and building what matters
-  Measuring to ensure updates are a success
-  And much more!
-
-  Email address
-  email@company.com
-
-  Subscribe to monthly newsletter
-
-  <!-- Sign-up form end -->
-
-  <!-- Success message start -->
-
-  Thanks for subscribing!
-
-  A confirmation email has been sent to ash@loremcompany.com. 
-  Please open it and click the button inside to confirm your subscription.
-
-  Dismiss message
-
-  <!-- Success message end -->
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+      <!-- Thanks for subscribing! A confirmation email has been sent to ash@loremcompany.com. Please open it and click the button inside to confirm your subscription. Dismiss message -->
+    </main>
+    <!-- Success message end -->
+  </body>
 </html>
