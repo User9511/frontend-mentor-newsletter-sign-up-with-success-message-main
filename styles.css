@@ -43,7 +43,7 @@ body {
 .text-container {
   display: grid;
   align-content: center;
-  gap: 1rem;
+  gap: 1.5rem;
   padding: 2rem;
   order: 2;
 }
