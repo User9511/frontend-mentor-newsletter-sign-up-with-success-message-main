@@ -69,7 +69,7 @@ ul li {
 }
 
 .image-container img {
-  width: 100%;
+  min-width: 100%;
 }
 
 .email-container {
