@@ -24,7 +24,7 @@
 
 body {
   display: grid;
-  height: 100vh;
+  /* height: 100vh; */
   justify-content: center;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
@@ -135,6 +135,7 @@ label {
 @media screen and (min-width: 48rem) {
   body {
     align-items: center;
+    height: 100vh;
   }
   .card-container {
     grid-template-columns: 1fr 1fr;
