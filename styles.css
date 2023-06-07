@@ -22,7 +22,7 @@
   --orange-gradient: hsl(14, 99%, 62%);
 
   /* Font Size */
-  --h1: clamp(2.4rem, 3vw + 0.25rem, 4rem);
+  --header: clamp(2.4rem, 3vw + 0.25rem, 4rem);
   --body: 16px;
   --email-label: 12.5px;
 }
@@ -34,6 +34,7 @@ body {
   background-color: var(--Dark-Slate-Grey);
 }
 
+/* Sign-up form start */
 .card-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -94,6 +95,7 @@ button {
   color: var(--White);
   font-weight: 700;
   cursor: pointer;
+  width: 100%;
 }
 
 button:hover {
@@ -113,6 +115,24 @@ button {
   color: var(--Tomato);
 }
 
+/* Success card start */
+.card-container.success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 3.5rem;
+  max-width: 30rem;
+}
+
+.hide {
+  display: none !important;
+}
+
+.icon-success {
+  align-self: start;
+}
+
 /* Typography */
 h1,
 p,
@@ -121,8 +141,13 @@ label {
   color: var(--Dark-Slate-Grey);
 }
 
-h1 {
-  font-size: var(--h1);
+h1,
+h2 {
+  font-size: var(--header);
+}
+
+p {
+  line-height: 1.4;
 }
 
 label {
