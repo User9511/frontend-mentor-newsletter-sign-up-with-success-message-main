@@ -22,7 +22,7 @@
   --orange-gradient: hsl(14, 99%, 62%);
 
   /* Font Size */
-  --h1: clamp(2.4rem, 5vw, 4rem);
+  --h1: clamp(2.4rem, 3vw + 0.5rem, 4rem);
   --body: 16px;
   --email-label: 12.5px;
 }
