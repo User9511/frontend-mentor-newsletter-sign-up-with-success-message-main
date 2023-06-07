@@ -1,26 +1,26 @@
-// Get the necessary elements
+// Get references to the email input and error message elements
 const emailInput = document.getElementById("email");
 const emailError = document.getElementById("email-error");
-const submitButton = document.querySelector(".btn");
 
-// Function to validate the email address
-function validateEmail(event) {
-  event.preventDefault(); // Prevent the form from submitting
+// Add an event listener to the email input for real-time validation
+emailInput.addEventListener("input", function () {
+  // Get the trimmed value of the email input
+  const email = emailInput.value.trim();
 
-  const emailValue = emailInput.value;
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Regular expression for email validation
-  const isValidEmail = emailRegex.test(emailValue);
-
-  if (!isValidEmail) {
-    emailInput.classList.add("red"); // Add the "red" class to the email input
-    emailError.style.display = "block";
-  } else {
-    emailInput.classList.remove("red"); // Remove the "red" class from the email input if it was previously added
+  // Check if the email is valid
+  if (validateEmail(email)) {
+    // If the email is valid, remove the red class from the input and hide the error message
+    emailInput.classList.remove("red");
     emailError.style.display = "none";
-    // Submit the form or perform other actions
-    // Here you can add the code to submit the form or perform any other actions when the email is valid
+  } else {
+    // If the email is not valid, add the red class to the input and show the error message
+    emailInput.classList.add("red");
+    emailError.style.display = "block";
   }
-}
+});
 
-// Event listener for form submission
-submitButton.addEventListener("click", validateEmail);
+// Function to validate the email using a regular expression
+function validateEmail(email) {
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return regex.test(email);
+}
