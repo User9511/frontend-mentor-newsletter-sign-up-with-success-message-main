@@ -20,14 +20,17 @@
   /* Gradient */
   --pink-gradient: hsl(347, 100%, 66%);
   --orange-gradient: hsl(14, 99%, 62%);
+
+  /* Font Size */
+  --h1: clamp(2.4rem, 5vw, 4rem);
+  --body: 16px;
+  --email-label: 12.5px;
 }
 
 body {
   display: grid;
-  /* height: 100vh; */
-  /* justify-content: center; */
   font-family: "Roboto", sans-serif;
-  font-size: 16px;
+  font-size: var(--body);
   background-color: var(--Dark-Slate-Grey);
 }
 
@@ -82,7 +85,7 @@ input[type="email"] {
 
 #email-error {
   display: none;
-  font-size: 12.5px;
+  font-size: var(--email-label);
   color: var(--Tomato);
 }
 
@@ -119,11 +122,11 @@ label {
 }
 
 h1 {
-  font-size: 3.25rem;
+  font-size: var(--h1);
 }
 
 label {
-  font-size: 12.5px;
+  font-size: var(--email-label);
   font-weight: 700;
 }
 
