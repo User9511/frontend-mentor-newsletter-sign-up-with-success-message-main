@@ -9,36 +9,36 @@
 }
 
 :root {
-  /* ### Primary */
-  --Tomato: hsl(4, 100%, 67%);
-  --Tomato-bg: hsl(5, 100%, 95%);
-  /* ### Neutral */
-  --Dark-Slate-Grey: hsl(234, 29%, 20%);
-  --Charcoal-Grey: hsl(235, 18%, 26%);
-  --Grey: hsl(231, 7%, 60%);
-  --White: hsl(0, 0%, 100%);
+  /* Primary */
+  --color-tomato: hsl(4, 100%, 67%);
+  --color-tomato-bg: hsl(5, 100%, 95%);
+  /* Neutral */
+  --color-dark-slate-grey: hsl(234, 29%, 20%);
+  --color-charcoal-grey: hsl(235, 18%, 26%);
+  --color-grey: hsl(231, 7%, 60%);
+  --color-white: hsl(0, 0%, 100%);
   /* Gradient */
-  --pink-gradient: hsl(347, 100%, 66%);
-  --orange-gradient: hsl(14, 99%, 62%);
+  --color-pink-gradient: hsl(347, 100%, 66%);
+  --color-orange-gradient: hsl(14, 99%, 62%);
 
   /* Font Size */
-  --header: clamp(2.4rem, 3vw + 0.25rem, 4rem);
-  --body: 16px;
-  --email-label: 12.5px;
+  --font-header: clamp(2.4rem, 3vw + 0.25rem, 4rem);
+  --font-body: 16px;
+  --font-email-label: 12.5px;
 }
 
 body {
   display: grid;
   font-family: "Roboto", sans-serif;
-  font-size: var(--body);
-  background-color: var(--Dark-Slate-Grey);
+  font-size: var(--font-body);
+  background-color: var(--color-dark-slate-grey);
 }
 
 /* Sign-up form start */
 .card-container {
   display: grid;
   grid-template-columns: 1fr;
-  background-color: var(--White);
+  background-color: var(--color-white);
   border-radius: 1.5rem;
   max-width: 55rem;
   padding: 0;
@@ -81,25 +81,29 @@ ul li {
 }
 
 input[type="email"] {
-  outline: 1px solid var(--Grey);
+  outline: 1px solid var(--color-grey);
+}
+
+input[type="email"]:focus {
+  outline: 1px solid var(--color-charcoal-grey);
 }
 
 #email-error {
   display: none;
-  font-size: var(--email-label);
-  color: var(--Tomato);
+  font-size: var(--font-email-label);
+  color: var(--color-tomato);
 }
 
 button {
-  background-color: var(--Dark-Slate-Grey);
-  color: var(--White);
+  background-color: var(--color-dark-slate-grey);
+  color: var(--color-white);
   font-weight: 700;
   cursor: pointer;
   width: 100%;
 }
 
 button:hover {
-  background: linear-gradient(90deg, var(--pink-gradient), var(--orange-gradient));
+  background: linear-gradient(90deg, var(--color-pink-gradient), var(--color-orange-gradient));
 }
 
 input[type="email"],
@@ -110,9 +114,9 @@ button {
 }
 
 .red {
-  outline: 1px solid var(--Tomato) !important;
-  background: var(--Tomato-bg);
-  color: var(--Tomato);
+  outline: 1px solid var(--color-tomato) !important;
+  background: var(--color-tomato-bg);
+  color: var(--color-tomato);
 }
 
 /* Success card start */
@@ -138,12 +142,12 @@ h1,
 p,
 li,
 label {
-  color: var(--Dark-Slate-Grey);
+  color: var(--color-dark-slate-grey);
 }
 
 h1,
 h2 {
-  font-size: var(--header);
+  font-size: var(--font-header);
 }
 
 p {
@@ -151,7 +155,7 @@ p {
 }
 
 label {
-  font-size: var(--email-label);
+  font-size: var(--font-email-label);
   font-weight: 700;
 }
 
@@ -161,6 +165,7 @@ label {
     justify-content: center;
     height: 100vh;
   }
+
   .card-container {
     grid-template-columns: 1fr 1fr;
     padding: 1rem;
@@ -168,9 +173,6 @@ label {
 
   .image-container {
     order: 2;
-  }
-
-  .image-container {
     justify-self: end;
   }
 }
